@@ -1,6 +1,6 @@
 # Advanced_Tutorial_1
 
-ARIM-Academy 基礎編：Scikit-learnを使った機械学習
+ARIM-ACADEMY-2026 基礎編：Scikit-learnを使った機械学習
 
 Pythonの基礎的な文法を理解している方を対象に、pandas・matplotlib・seaborn・scikit-learnを使った探索的データ分析（EDA）・回帰・分類・次元削減・クラスタリングの一連の流れを、3種類のデータセット（住宅価格・大気腐食・茶の元素分析）を通じて学ぶ教材です。
 
@@ -12,12 +12,12 @@ Pythonの基礎的な文法を理解している方を対象に、pandas・matpl
 
 | No. | ノートブック | Colabで開く | データセット | 内容 |
 | --- | --- | --- | --- | --- |
-| 1 | [`Scikit-learn-1_EDA.ipynb`](./Scikit-learn-1_EDA.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ARIM-Academy/Advanced_Tutorial_1/blob/main/Scikit-learn-1_EDA.ipynb) | Japan Housing（架空・教材用） | 探索的データ分析（EDA）：概要統計、箱ひげ図、ペアプロット、相関係数、ヒートマップ、単回帰の基礎 |
-| 2 | [`Scikit-learn-2_ML.ipynb`](./Scikit-learn-2_ML.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ARIM-Academy/Advanced_Tutorial_1/blob/main/Scikit-learn-2_ML.ipynb) | Japan Housing（架空・教材用） | 回帰モデルの構築と比較：線形重回帰・Lasso回帰・ランダムフォレスト、train/test分割、過学習、モデル比較 |
-| 3 | [`Scikit-learn-3_EDA.ipynb`](./Scikit-learn-3_EDA.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ARIM-Academy/Advanced_Tutorial_1/blob/main/Scikit-learn-3_EDA.ipynb) | 大気腐食データセット（実データ） | 探索的データ分析：住宅価格編と同じ手順を、NIMSの実際の研究データに適用 |
-| 4 | [`Scikit-learn-4_ML.ipynb`](./Scikit-learn-4_ML.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ARIM-Academy/Advanced_Tutorial_1/blob/main/Scikit-learn-4_ML.ipynb) | 大気腐食データセット（実データ） | 回帰モデルの構築と比較、データリーケージへの注意、k-foldクロスバリデーション、地点外挿の限界 |
-| 5 | [`Scikit-learn-5_Classification.ipynb`](./Scikit-learn-5_Classification.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ARIM-Academy/Advanced_Tutorial_1/blob/main/Scikit-learn-5_Classification.ipynb) | 茶の元素分析データセット（実データ） | 教師あり学習による分類：決定木・ランダムフォレスト・SVM、混同行列、適合率・再現率 |
-| 6 | [`Scikit-learn-6_PCA_Clustering.ipynb`](./Scikit-learn-6_PCA_Clustering.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ARIM-Academy/Advanced_Tutorial_1/blob/main/Scikit-learn-6_PCA_Clustering.ipynb) | 茶の元素分析データセット（実データ） | 教師なし学習：主成分分析（PCA）・t-SNE・UMAPによる次元削減、階層クラスタリング・k-means |
+| 1 | [`Scikit-learn-1_EDA.ipynb`](./Scikit-learn-1_EDA.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ARIM-ACADEMY-2026/Advanced_Tutorial_1/blob/main/Scikit-learn-1_EDA.ipynb) | Japan Housing（架空・教材用） | 探索的データ分析（EDA）：概要統計、箱ひげ図、ペアプロット、相関係数、ヒートマップ、単回帰の基礎 |
+| 2 | [`Scikit-learn-2_ML.ipynb`](./Scikit-learn-2_ML.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ARIM-ACADEMY-2026/Advanced_Tutorial_1/blob/main/Scikit-learn-2_ML.ipynb) | Japan Housing（架空・教材用） | 回帰モデルの構築と比較：線形重回帰・Lasso回帰・ランダムフォレスト、train/test分割、過学習、モデル比較 |
+| 3 | [`Scikit-learn-3_EDA.ipynb`](./Scikit-learn-3_EDA.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ARIM-ACADEMY-2026/Advanced_Tutorial_1/blob/main/Scikit-learn-3_EDA.ipynb) | 大気腐食データセット（実データ） | 探索的データ分析：住宅価格編と同じ手順を、NIMSの実際の研究データに適用 |
+| 4 | [`Scikit-learn-4_ML.ipynb`](./Scikit-learn-4_ML.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ARIM-ACADEMY-2026/Advanced_Tutorial_1/blob/main/Scikit-learn-4_ML.ipynb) | 大気腐食データセット（実データ） | 回帰モデルの構築と比較、データリーケージへの注意、k-foldクロスバリデーション、地点外挿の限界 |
+| 5 | [`Scikit-learn-5_Classification.ipynb`](./Scikit-learn-5_Classification.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ARIM-ACADEMY-2026/Advanced_Tutorial_1/blob/main/Scikit-learn-5_Classification.ipynb) | 茶の元素分析データセット（実データ） | 教師あり学習による分類：決定木・ランダムフォレスト・SVM、混同行列、適合率・再現率 |
+| 6 | [`Scikit-learn-6_PCA_Clustering.ipynb`](./Scikit-learn-6_PCA_Clustering.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ARIM-ACADEMY-2026/Advanced_Tutorial_1/blob/main/Scikit-learn-6_PCA_Clustering.ipynb) | 茶の元素分析データセット（実データ） | 教師なし学習：主成分分析（PCA）・t-SNE・UMAPによる次元削減、階層クラスタリング・k-means |
 
 ノートブックは1→6の順に読み進めることを想定しています。1・2（住宅価格）と3・4（大気腐食）は同じコード構成をあえて踏襲しており、「同じ手順が題材を変えても通用すること」を確認できるように作られています。5・6は分類・教師なし学習という新しいテーマを扱います。
 
@@ -44,14 +44,14 @@ Pythonの基礎的な文法を理解している方を対象に、pandas・matpl
 各ノートブックの冒頭にある「教材への接続」セルを実行すると、このリポジトリを自動的にクローンし、`data/`フォルダ内のデータセットを読み込む準備が整います。
 
 ```python
-!git clone https://github.com/ARIM-Academy/Advanced_Tutorial_1.git
+!git clone https://github.com/ARIM-ACADEMY-2026/Advanced_Tutorial_1.git
 %cd Advanced_Tutorial_1
 ```
 
 ローカル環境で実行する場合は、このセルは不要です。リポジトリを手元にクローンし、ノートブックと同じ階層に`data/`フォルダがあることを確認してから実行してください。
 
 ```bash
-git clone https://github.com/ARIM-Academy/Advanced_Tutorial_1.git
+git clone https://github.com/ARIM-ACADEMY-2026/Advanced_Tutorial_1.git
 cd Advanced_Tutorial_1
 pip install -r requirements.txt  # 未整備の場合は上記「動作環境」を参照して個別にインストールしてください
 jupyter lab
