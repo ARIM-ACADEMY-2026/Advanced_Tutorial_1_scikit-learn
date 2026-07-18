@@ -17,9 +17,10 @@ Pythonの基礎的な文法を理解している方を対象に、pandas・matpl
 | 3 | [`Scikit-learn-3_EDA.ipynb`](./Scikit-learn-3_EDA.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ARIM-ACADEMY-2026/Advanced_Tutorial_1_scikit-learn/blob/main/Scikit-learn-3_EDA.ipynb) | 大気腐食データセット（実データ） | 探索的データ分析：住宅価格編と同じ手順を、NIMSの実際の研究データに適用 |
 | 4 | [`Scikit-learn-4_ML.ipynb`](./Scikit-learn-4_ML.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ARIM-ACADEMY-2026/Advanced_Tutorial_1_scikit-learn/blob/main/Scikit-learn-4_ML.ipynb) | 大気腐食データセット（実データ） | 回帰モデルの構築と比較、データリーケージへの注意、k-foldクロスバリデーション、地点外挿の限界 |
 | 5 | [`Scikit-learn-5_Classification.ipynb`](./Scikit-learn-5_Classification.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ARIM-ACADEMY-2026/Advanced_Tutorial_1_scikit-learn/blob/main/Scikit-learn-5_Classification.ipynb) | 茶の元素分析データセット（実データ） | 教師あり学習による分類：決定木・ランダムフォレスト・SVM、混同行列、適合率・再現率 |
-| 6 | [`Scikit-learn-6_PCA_Clustering.ipynb`](./Scikit-learn-6_PCA_Clustering.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ARIM-ACADEMY-2026/Advanced_Tutorial_1_scikit-learn/blob/main/Scikit-learn-6_PCA_Clustering.ipynb) | 茶の元素分析データセット（実データ） | 教師なし学習：主成分分析（PCA）・t-SNE・UMAPによる次元削減、階層クラスタリング・k-means |
+| 6 | [`Scikit-learn-6_Dimension-Reduction.ipynb`](./Scikit-learn-6_Dimension-Reduction.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ARIM-ACADEMY-2026/Advanced_Tutorial_1_scikit-learn/blob/main/Scikit-learn-6_Dimension-Reduction.ipynb) | 茶の元素分析データセット（実データ） | 教師なし学習・次元削減：主成分分析（PCA）・t-SNE・UMAP、標準化の重要性、UMAPハイパーパラメータの影響 |
+| 7 | [`Scikit-learn-7_Clustering.ipynb`](./Scikit-learn-7_Clustering.ipynb) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ARIM-ACADEMY-2026/Advanced_Tutorial_1_scikit-learn/blob/main/Scikit-learn-7_Clustering.ipynb) | 茶の元素分析データセット（実データ） | 教師なし学習・クラスタリング：階層クラスタリング・k-means・HDBSCAN、交絡要因（抽出濃度・時間）の発見と除去 |
 
-ノートブックは1→6の順に読み進めることを想定しています。1・2（住宅価格）と3・4（大気腐食）は同じコード構成をあえて踏襲しており、「同じ手順が題材を変えても通用すること」を確認できるように作られています。5・6は分類・教師なし学習という新しいテーマを扱います。
+ノートブックは1→7の順に読み進めることを想定しています。1・2（住宅価格）と3・4（大気腐食）は同じコード構成をあえて踏襲しており、「同じ手順が題材を変えても通用すること」を確認できるように作られています。5〜7は分類・教師なし学習という新しいテーマを扱い、6・7はもともと1本のノートブックだった内容を、分量の都合で次元削減編・クラスタリング編の2本に分割したものです（6を先に読むことを前提に7が書かれています）。
 
 ---
 
@@ -33,9 +34,9 @@ Pythonの基礎的な文法を理解している方を対象に、pandas・matpl
 
 - Python 3.10以降
 - pandas 2.x / numpy 1.26以降 / matplotlib 3.8以降 / seaborn 0.12以降
-- scikit-learn 1.2以降（`Pipeline`・`StandardScaler`・`train_test_split`・`GroupKFold`などを使用）
+- scikit-learn 1.2以降（`Pipeline`・`StandardScaler`・`train_test_split`・`GroupKFold`・`HDBSCAN`などを使用）
 - `matplotlib_fontja`（日本語フォント表示用）
-- `umap-learn`（ノートブック6のみ、UMAPで使用。ノートブック内で自動インストールされます）
+- `umap-learn`（ノートブック6・7で使用。ノートブック内で自動インストールされます）
 
 いずれもGoogle Colabの標準環境（2026年時点）であれば満たされます。
 
@@ -73,12 +74,14 @@ Boston Housingの原変数の一部（人種構成に基づく`B`変数）は、
 
 本講義用にアレンジされたデータであり、論文で使用されたデータセットそのものとは異なります。
 
-### 茶の元素分析データセット（ノートブック5・6）
-4種類の茶葉（ブラックセイロン、ブラックトルコ、グリーンセイロン、グリーントルコ）を対象に、ICP-OESで分析した9元素（Al, Ca, Cu, Fe, K, Mg, Mn, Na, Zn）の濃度データです。
+### 茶の元素分析データセット（ノートブック5・6・7）
+4種類の茶葉（ブラックセイロン、ブラックトルコ、グリーンセイロン、グリーントルコ）を対象に、ICP-OESで分析した9元素（Al, Ca, Cu, Fe, K, Mg, Mn, Na, Zn）の濃度データに加え、実際の抽出条件（抽出濃度・抽出時間）を含みます。全247件のうち、抽出条件が記録されていない79件は欠損値として各ノートブック内で除去し、168件（4品種×3抽出濃度×7抽出時間×2反復）を分析に使用します。
 
 > Durmus, Y., Atasoy, A.D. & Atasoy, A.F. Mathematical optimization of multilinear and artificial neural network regressions for mineral composition of different tea types infusions. *Sci Rep* 14, 18285 (2024). https://doi.org/10.1038/s41598-024-69149-1
 
 本講義用に、上記論文の実験データをもとに整理したものです。
+
+> **教材としての見どころ：** 元素分析値だけを使った次元削減・クラスタリング（ノートブック6・7）は、品種ではなく抽出濃度・抽出時間という**交絡要因**を強く反映してしまいます。ノートブック7では、この交絡要因を実際のデータで裏付けたうえで、統計的に取り除く（残差化する）ことで、品種による違いを改めて捉え直せるかを検証しています。
 
 ---
 
