@@ -1,6 +1,4 @@
-# Advanced_Tutorial_1
-
-ARIM-ACADEMY-2026 基礎編：Scikit-learnを使った機械学習
+# ARIM-ACADEMY-2026 基礎編：Scikit-learnを使った機械学習
 
 Pythonの基礎的な文法を理解している方を対象に、pandas・matplotlib・seaborn・scikit-learnを使った探索的データ分析（EDA）・回帰・分類・次元削減・クラスタリングの一連の流れを、3種類のデータセット（住宅価格・大気腐食・茶の元素分析）を通じて学ぶ教材です。
 
