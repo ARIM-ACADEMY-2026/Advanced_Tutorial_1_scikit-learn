@@ -47,15 +47,6 @@ Pythonの基礎的な文法を理解している方を対象に、pandas・matpl
 %cd Advanced_Tutorial_1_scikit-learn
 ```
 
-ローカル環境で実行する場合は、このセルは不要です。リポジトリを手元にクローンし、ノートブックと同じ階層に`data/`フォルダがあることを確認してから実行してください。
-
-```bash
-git clone https://github.com/ARIM-ACADEMY-2026/Advanced_Tutorial_1_scikit-learn.git
-cd Advanced_Tutorial_1_scikit-learn
-pip install -r requirements.txt  # 未整備の場合は上記「動作環境」を参照して個別にインストールしてください
-jupyter lab
-```
-
 ---
 
 ## データセットと出典
